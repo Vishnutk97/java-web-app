@@ -15,10 +15,7 @@ node {
     }
   
     stage('build') {
-      steps {
-                withMaven(maven: Maven) {
-                    sh 'mvn clean package'
-                }
+      sh 'mvn clean package'
     }
   
     stage('deploy') {
