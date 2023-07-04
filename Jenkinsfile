@@ -22,7 +22,7 @@ node {
       def resourceGroup = 'Java-web-app-6907_group'
       def webAppName = 'Java-web-app-6907'
       // login Azure
-      withCredentials([usernamePassword(credentialsId: XVR8Q~P-Ux-eZU_-CwkEfbMfzsCtqjcJzbOkVbSO, passwordVariable: e6d46255-c1e5-4593-8106-258f261410a2, usernameVariable: a481493c-b59c-40f8-86ee-94ae24ab12b6)]) {
+      withCredentials([usernamePassword(credentialsId: 'XVR8Q~P-Ux-eZU_-CwkEfbMfzsCtqjcJzbOkVbSO', passwordVariable:'e6d46255-c1e5-4593-8106-258f261410a2', usernameVariable: 'a481493c-b59c-40f8-86ee-94ae24ab12b6')]) {
        sh '''
           az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
           az account set -s $AZURE_SUBSCRIPTION_ID
